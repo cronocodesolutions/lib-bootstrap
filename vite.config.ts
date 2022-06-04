@@ -1,17 +1,14 @@
 import { defineConfig } from 'vite';
-// import reactPlugin from '@vitejs/plugin-react';
-
-const libName = 'lib-bootstrap';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-  plugins: [
-    // reactPlugin(),
-  ],
+  plugins: [dts()],
   build: {
     lib: {
-      entry: `./src/${libName}.ts`,
-      name: libName,
-      fileName: (format) => `${libName}.${format}.js`,
+      entry: `./src/index.ts`,
+      name: 'index',
+      formats: ['es', 'cjs'],
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       // NOTE: external dependencies to ignore from library
