@@ -4,12 +4,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/lib-bootstrap.umd.js",
-  "module": "./dist/lib-bootstrap.es.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/lib-bootstrap.es.js",
-      "require": "./dist/lib-bootstrap.umd.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     }
   },
   "scripts": {
